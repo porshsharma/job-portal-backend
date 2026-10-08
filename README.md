@@ -80,4 +80,4 @@ The app starts on `http://localhost:8080`. The H2 console is available at `http:
 
 ## Author
 
-Built by Porsh Sharma as a learning project to strengthen backend development skills with Java and Spring Boot.
+Built by Porush Sharma as a learning project to strengthen backend development skills with Java and Spring Boot.

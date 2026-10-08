@@ -33,6 +33,7 @@ public class SecurityConfig {
                 .requestMatchers(HttpMethod.PUT, "/api/jobs/**").hasRole("EMPLOYER")
                 .requestMatchers(HttpMethod.DELETE, "/api/jobs/**").hasRole("EMPLOYER")
                 .requestMatchers(HttpMethod.POST, "/api/applications/**").hasRole("APPLICANT")
+                .requestMatchers(HttpMethod.PUT, "/api/applications/**").hasRole("EMPLOYER")
                 .anyRequest().authenticated()
             )
             .headers(headers -> headers.frameOptions(frame -> frame.disable()))
