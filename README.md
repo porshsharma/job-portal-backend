@@ -22,6 +22,8 @@ A REST API backend for a job portal application, built with Spring Boot. Support
 - Company profiles linked to their owning Employer
 - Job applications linking Applicants to Jobs, with status tracking
 - Centralized exception handling for clean, consistent error responses
+- Password hashes are never returned in API responses
+- Applicants can only view their own applications; only Employers can update application status
 
 ## Entities
 
@@ -59,7 +61,8 @@ A REST API backend for a job portal application, built with Spring Boot. Support
 |---|---|---|---|
 | POST | `/api/applications` | APPLICANT only | Apply to a job |
 | GET | `/api/applications` | Authenticated | List all applications |
-| PUT | `/api/applications/{id}/status` | Authenticated | Update application status |
+| PUT | `/api/applications/{id}/status` | EMPLOYER only | Update application status |
+
 
 ## Running Locally
 
